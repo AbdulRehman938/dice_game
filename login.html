@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/favicon-32x32.png">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div id="stats-history-btn" style="display: none;">
+            <button class="stats-btn">Stats History</button>
+        </div>
+        
+        <div id="players" class="player-box">
+            <div id="p1-inner">
+                <div id="player1">
+                    <p id="p1-head">Player 1</p>
+                    <input type="text" id="p1-input" placeholder="Enter your name" maxlength="7">
+                </div>
+                <!-- Container for Player 1's dice results -->
+                <div id="player1-moves" class="moves-container"></div>
+            </div>
+            <div class="container">
+                <div class="dice">
+                    <div class="face front"></div>
+                    <div class="face back"></div>
+                    <div class="face top"></div>
+                    <div class="face bottom"></div>
+                    <div class="face right"></div>
+                    <div class="face left"></div>
+                </div>
+    
+                <button class="roll">
+                    Press <span id="btn-main-text">spacebar</span> or <span id="btn-main-text"> enter key </span> <br> to
+                    roll
+                    dice
+                </button>
+    
+                <p class="message">Add PLAYERS</p>
+                <p id="currentUser"></p>
+    
+                <ul class="outcomes"></ul>
+            </div>
+            <div id="p2-inner">
+                <div id="player2">
+                    <p id="p1-head">Player 2</p>
+                    <input type="text" id="p2-input" placeholder="Enter your name" maxlength="7">
+                </div>
+                <!-- Container for Player 2's dice results -->
+                <div id="player2-moves" class="moves-container"></div>
+            </div>
+        </div>
+        <div id="log-btn">
+            <button class="login-btn">Logout</button>
+        </div>
+      
+
+        <div id="start-modal" class="modal">
+            <div class="modal-content">
+                <p></p>
+                <button id="start-game-btn">Start Game!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js" type="text/javascript"></script>
+</body>
+</html>

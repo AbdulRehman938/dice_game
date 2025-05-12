@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    font-family: "Pattaya", sans-serif;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: 
+        linear-gradient(to bottom left, rgba(0, 0, 0, 0.483), rgb(136, 136, 136)),
+        url(./images/pexels-pixabay-37534.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    font-family: "Pattaya", sans-serif;
+    text-align: center;
+}
+
+.login-h2 {
+    font-size: 2.5vw;
+    font-weight: lighter;
+    margin-bottom: 3rem;
+}
+
+.inp-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.input-container {
+    position: relative;
+    width: 20vw;
+    /* Push input down without breaking label positioning */
+    left: -20px;
+}
+
+
+/* Default label position */
+.lab-userName,
+#lab-userNamep,
+.lab-pass {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-10px);
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none; /* Prevent clicking */
+}
+
+/* Move label when input is focused or hovered */
+#userName:focus + .lab-userName,
+#userName:hover + .lab-userName,
+#userName:not(:placeholder-shown) + .lab-userName{
+    top: 5px;
+    color: white;
+}
+#pass:focus + .lab-pass,
+#pass:hover + .lab-pass,
+#pass:not(:placeholder-shown) + .lab-pass {
+    top: 5px;
+    color: white;
+}
+
+.newacp:focus + .lab-userName,
+.newacp:hover + .lab-userName,
+.newacp:not(:placeholder-shown) + .lab-userName{
+    top: 5px;
+    color: white;
+}
+
+.newacp:hover {
+    cursor: pointer;
+}
+
+#createAccountBtn {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1vw;
+    width: 30vw;
+    position: relative;
+    left: 1.5rem;
+}
+
+/* Input styles */
+#userName,
+#pass {
+    padding: 1rem 1rem;
+    font-size: 1.1rem;
+    width: 120%;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    background-color: #ffffff38;
+    color: white;
+    outline: none;
+}
+
+.newacp {
+    padding: 1rem 1rem;
+    font-size: 1.1rem;
+    width: 120%;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    background-color: #ffffff38;
+    color: white;
+    outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: #ffffff38 inset !important; /* Change 'white' to your desired background color */
+    -webkit-text-fill-color: #000 !important; /* Change '#000' to your desired text color */
+    transition: background-color 5000s ease-in-out 0s; /* Prevent background color change on autofill */
+}
+
+#loginMessage {
+    color: red; /* Error message color */
+    font-size: 1.5rem; /* Font size */
+    font-weight: bold; /* Make the text bold */
+    
+    margin-top: 10px; /* Spacing from the form */
+    text-align: center; /* Center the text */
+}
+
+/* Add cursor pointer */
+#userName:hover,
+#pass:hover {
+    cursor: pointer;
+}
+
+#eye-icon {
+    height: auto;
+    width: 25px;
+    position: relative;
+    top: -3.5rem;
+    left: 13rem;
+    cursor: pointer;
+}
+
+.login-btn {
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    width: 100%;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    background-color: #00000086;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: .3s all ease-in-out;
+}
+
+#login-btn2 {
+    padding: 1.4rem 1rem;
+    font-size: 1.2rem;
+    width: 100%;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    background-color: #00000086;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: .3s all ease-in-out;
+}
+
+.sign-in {
+    margin-left: 2rem;
+}
+
+.login-btn:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 3px solid black;
+}
+
+#login-btn2:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 3px solid black;
+}
+
+#login-check, #login-check2 {
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+}
+
+#login-check {
+    appearance: none;
+    background-color: #00000086;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#login-check:checked {
+    background-color: black; /* Change background when checked */
+}
+
+#login-check:checked::before {
+    content: '✔'; /* Tick mark */
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    left: 5%;
+    top: 0%;
+}
+
+.div-input-login-btn {
+    display: flex;
+    margin-top: 1rem;
+    gap: 1rem;
+    position: relative;
+    left: -1.5rem;
+}
+
+.login-inp-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.login-forgot {
+    position: relative;
+    left: 3rem;
+}
+
+.forgot-p {
+    position: relative;
+    top: 1rem;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.forgot-p:hover {
+    color: rgba(255, 255, 255, 0.619);
+}
+
+.p-other-sign {
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.google-img, .facebook-img, .X-img, .apple-img {
+    width: auto;
+    height: 2rem;
+}
+
+.google-img:hover, .facebook-img:hover, .X-img:hover, .apple-img:hover {
+    box-shadow: white ;
+    background-color: rgba(255, 255, 255, 0.778);
+    border-radius: 50%;
+    transition: .5s ease-in-out all;
+}
+
+.login-imgs {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}

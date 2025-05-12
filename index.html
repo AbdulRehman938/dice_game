@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <meta author="Abdul Rehman" description="Sample practice">
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="./images/favicon-32x32.png">
+</head>
+
+<body>
+    <div class="login">
+        <div class="container2">
+            <h2 class="login-h2">Have an account?</h2>
+            <form id="loginForm">
+                <div class="inp-login">
+                    <div class="input-container">
+                        <input type="text" id="userName" placeholder=" " required>
+                        <label for="userName" class="lab-userName">Username</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" id="pass" placeholder=" " required>
+                        <label for="pass" class="lab-pass">Password</label>
+                    </div>
+                    <!-- Eye icon for toggling password visibility -->
+                    <img src="./images/pass-hide.png" alt="eye" id="eye-icon" onclick="pass()">
+                </div>
+                <div class="input-container">
+                    <button class="login-btn sign-in" type="submit">SIGN IN</button>
+                </div>
+            </form>
+            <div class="login-inp-main">
+                <div class="div-input-login-btn">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check" id="login-check2">Remember Me </label>
+                </div>
+                <div class="login-forgot">
+                    <p class="forgot-p" id="createAccountLink">Create a new account</p>
+                </div>
+            </div>
+            <p id="loginMessage" class="forgot-p"></p>
+        </div>
+    </div>
+    <script src="login.js"></script>
+    
+</body>
+
+</html>

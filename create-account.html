@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="./images/favicon-32x32.png">
+</head>
+<body>
+    <div class="login">
+        <div class="container2">
+            <h2 class="login-h2">Create Account</h2>
+            <form id="createAccountForm">
+                <div class="inp-login">
+                    <div class="input-container">
+                        <input type="text" id="firstName" class="newacp" placeholder=" " required>
+                        <label for="firstName" class="lab-userName">First Name</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="lastName" class="newacp" placeholder=" " required>
+                        <label for="lastName" class="lab-userName">Last Name</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="newUsername" class="newacp" placeholder=" " required>
+                        <label for="newUsername" class="lab-userName">Username</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" id="newPassword" class="newacp" placeholder=" " required>
+                        <label for="newPassword" class="lab-pass lab-userName">Password</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" id="verifyPassword" class="newacp" placeholder=" " required>
+                        <label for="verifyPassword" class="lab-pass lab-userName">Verify Password</label>
+                    </div>
+                </div>
+                <div class="input-container" id="createAccountBtn">
+                    <button class="login-btn" type="submit">CREATE ACCOUNT</button>
+                    <button class="login-btn" id="login-btn2" type="button">ALREADY HAVE AN ACCOUNT</button>
+                </div>
+            </form>
+            <p id="createAccountMessage" class="forgot-p"></p>
+        </div>
+    </div>
+    <script src="create-account.js"></script>
+</body>
+</html>
