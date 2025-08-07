@@ -1,6 +1,5 @@
 import { Sequelize } from "sequelize";
-// Option 3: Passing parameters separately (other dialects)
-const sequelize = new Sequelize("game1login", "root", "8naqn0h4", {
+const sequelize = new Sequelize("game1login", "root", "8naqn0h4AR", {
   host: "localhost",
   dialect: "mysql",
 });
